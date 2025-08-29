@@ -17,6 +17,7 @@
 
 ## 2) 설치 & 실행 (Quick Start)
 
+```bash
 # 1) 가상환경
 python -m venv .venv
 # macOS/Linux
@@ -28,7 +29,6 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 # 3) API 키 설정 (아래 중 택1)
-```bash
 #   A. .env 파일(프로젝트 루트에 생성):
 #      API_KEY=발급받은_키값
 #   B. 현재 터미널 세션에 임시 설정(Windows PowerShell):
