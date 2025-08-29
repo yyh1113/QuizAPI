@@ -17,7 +17,6 @@
 
 ## 2) 설치 & 실행 (Quick Start)
 
-```bash
 # 1) 가상환경
 python -m venv .venv
 # macOS/Linux
@@ -29,6 +28,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 # 3) API 키 설정 (아래 중 택1)
+```bash
 #   A. .env 파일(프로젝트 루트에 생성):
 #      API_KEY=발급받은_키값
 #   B. 현재 터미널 세션에 임시 설정(Windows PowerShell):
@@ -38,4 +38,10 @@ pip install -r requirements.txt
 
 # 4) 서버 실행
 python -m uvicorn app:app --reload --port 8000
+
+Swagger UI: http://127.0.0.1:8000/docs
+
+OpenAPI JSON: http://127.0.0.1:8000/openapi.json
+
+참고: 주소창으로 /summarize_and_quiz를 열면 GET 요청이라 405/빈 화면이 정상
 
