@@ -58,4 +58,23 @@ Working directory: .../QuizAPI
 
 Env vars: API_KEY=발급키
 
+## 검증/에러 처리
+
+입력값 검증: text가 비어 있으면 400 (text is empty)
+
+환경변수 검증: API_KEY 미설정 시 500 (Missing API_KEY ...)
+
+LLM 출력 파싱 실패 시 500 (JSON parse failed: ...)
+
+스키마 검증 실패 시 502 (Model returned invalid schema)
+
+퀴즈 검증 실패 시 422
+
+choices 길이 4가 아님
+
+answer_index가 정수가 아니거나 0..3 범위를 벗어남
+
+그 외 예기치 못한 오류: 502 (Upstream model error)
+
+브라우저 주소창으로 GET /summarize_and_quiz 요청 시 빈 화면/405가 정상입니다. (POST 전용)
 
