@@ -8,71 +8,34 @@
 - JSON 스키마 검증 (선지 개수, 정답 인덱스 등)
 - `.env` 자동 탐색 및 로딩
 
-## 요구 사항
+## 1) 요구 사항
 - Python 3.10+
-- Google AI Studio API Key
+- Google AI Studio **API Key** (Gemini)
+- `requirements.txt` 설치
 
-## 설치
-git clone <your-repo-url>
-cd llm-quiz-api
+---
 
+## 2) 설치 & 실행 (Quick Start)
+
+```bash
+# 1) 가상환경
 python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
+# Windows PowerShell
+# .venv\Scripts\Activate.ps1
 
+# 2) 의존성
 pip install -r requirements.txt
 
-cp .env.example .env
-# .env 파일에 API_KEY=발급받은_키 입력
+# 3) API 키 설정 (아래 중 택1)
+#   A. .env 파일(프로젝트 루트에 생성):
+#      API_KEY=발급받은_키값
+#   B. 현재 터미널 세션에 임시 설정(Windows PowerShell):
+#      $env:API_KEY="발급받은_키값"
+#   C. 영구 설정(Windows PowerShell, 새 터미널부터 적용):
+#      setx API_KEY "발급받은_키값"
 
-## 터미널에서 실행
-
-작업 디렉터리를 app.py가 있는 폴더로 이동한 뒤:
-
+# 4) 서버 실행
 python -m uvicorn app:app --reload --port 8000
-
-Swagger UI(권장): http://127.0.0.1:8000/docs
-
-OpenAPI JSON: http://127.0.0.1:8000/openapi.json
-
---env-file .env 사용 시, 현재 폴더에 .env가 실제 존재해야 합니다. 절대경로도 가능: --env-file "C:/.../QuizAPI/.env"
-
-## PyCharm에서 실행
-
-Python 구성:
-
-Script path: .../QuizAPI/app.py
-
-Working directory: .../QuizAPI
-
-Env vars: API_KEY=발급키
-
-모듈 실행(uvicorn) 구성:
-
-Module name: uvicorn
-
-Parameters: app:app --reload --port 8000
-
-Working directory: .../QuizAPI
-
-Env vars: API_KEY=발급키
-
-## 검증/에러 처리
-
-입력값 검증: text가 비어 있으면 400 (text is empty)
-
-환경변수 검증: API_KEY 미설정 시 500 (Missing API_KEY ...)
-
-LLM 출력 파싱 실패 시 500 (JSON parse failed: ...)
-
-스키마 검증 실패 시 502 (Model returned invalid schema)
-
-퀴즈 검증 실패 시 422
-
-choices 길이 4가 아님
-
-answer_index가 정수가 아니거나 0..3 범위를 벗어남
-
-그 외 예기치 못한 오류: 502 (Upstream model error)
-
-브라우저 주소창으로 GET /summarize_and_quiz 요청 시 빈 화면/405가 정상입니다. (POST 전용)
 
