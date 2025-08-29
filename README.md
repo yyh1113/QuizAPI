@@ -14,7 +14,6 @@
 - 
 
 ## 설치
-```bash
 git clone <your-repo-url>
 cd llm-quiz-api
 
