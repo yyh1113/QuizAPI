@@ -11,7 +11,6 @@
 ## 요구 사항
 - Python 3.10+
 - Google AI Studio API Key
-- 
 
 ## 설치
 git clone <your-repo-url>
@@ -31,7 +30,7 @@ cp .env.example .env
 
 python -m uvicorn app:app --reload --port 8000
 
-Swagger UI: http://127.0.0.1:8000/docs
+Swagger UI(권장): http://127.0.0.1:8000/docs
 
 OpenAPI JSON: http://127.0.0.1:8000/openapi.json
 
