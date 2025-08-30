@@ -74,7 +74,7 @@ OpenAPI JSON: http://127.0.0.1:8000/openapi.json
 }
 ```
 ## 4) 호출 예시
-Swagger UI일 때
+Swagger UI일 때:
 
 1. http://127.0.0.1:8000/docs 접속
 
@@ -84,6 +84,12 @@ Swagger UI일 때
 
 4. Execute
 
+
+cURL일 때:
+
+curl -X POST "http://127.0.0.1:8000/summarize_and_quiz" \
+  -H "Content-Type: application/json" \
+  -d '{"text":"여기에 텍스트"}'
 
 ## 5) 트러블슈팅
 -API_KEY 미설정(500): .env의 API_KEY= 또는 PowerShell에서 $env:API_KEY="..." / setx API_KEY "...".
