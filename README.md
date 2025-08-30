@@ -83,7 +83,6 @@ Swagger UI일 때:
 
 4. Execute
 
-
 cURL일 때:
 
 curl -X POST "http://127.0.0.1:8000/summarize_and_quiz" \
@@ -98,3 +97,15 @@ curl -X POST "http://127.0.0.1:8000/summarize_and_quiz" \
 -JSON parse failed: 모델 출력이 코드펜스/포맷 이탈 → 재시도 또는 프롬프트·후처리 강화.
 
 -Windows setx 후 인식 안 됨: 새 터미널을 열어 실행.
+
+## 6) 동작 예시
+
+*Swagger UI를 이용한 경우입니다*
+
+<img width="3634" height="1592" alt="스크린샷 2025-08-30 012023" src="https://github.com/user-attachments/assets/08454303-175a-4280-94dd-ddfeed980f1f" />
+
+<img width="3497" height="1831" alt="스크린샷 2025-08-30 012220" src="https://github.com/user-attachments/assets/36c388fe-9aa9-4e8b-b521-6cab4067c1e3" />
+
+<img width="3470" height="1495" alt="스크린샷 2025-08-30 012244" src="https://github.com/user-attachments/assets/4a759046-7ce7-406b-a068-ca39fac8c824" />
+
+<img width="3607" height="1109" alt="스크린샷 2025-08-30 012313" src="https://github.com/user-attachments/assets/33906e83-8548-4c6e-b4c7-e0ef327bca21" />
