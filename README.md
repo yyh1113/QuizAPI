@@ -72,3 +72,14 @@ OpenAPI JSON: http://127.0.0.1:8000/openapi.json
     }
   ]
 }
+```
+4) 호출 예시
+Swagger UI일 때
+
+1. http://127.0.0.1:8000/docs 접속
+
+2. POST /summarize_and_quiz → Try it out
+
+3. Body에 {"text":"..."}
+
+4. Execute
