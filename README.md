@@ -42,8 +42,6 @@ python -m uvicorn app:app --reload --port 8000
 Swagger UI(권장): http://127.0.0.1:8000/docs
 OpenAPI JSON: http://127.0.0.1:8000/openapi.json
 
-참고: 주소창으로 /summarize_and_quiz를 열면 GET 요청이라 405/빈 화면이 정상
-
 ```
 
 ## 3) 엔드포인트
