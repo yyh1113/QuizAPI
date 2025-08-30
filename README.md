@@ -53,9 +53,9 @@ OpenAPI JSON: http://127.0.0.1:8000/openapi.json
   "text": "요약/퀴즈를 생성할 원문 텍스트를 여기에 입력"
 }
 ```
-```json
-- **Response 200 (application/json)
 
+- **Response 200 (application/json)**
+```json
 {
   "summary": "핵심 3문장 요약",
   "quizzes": [
