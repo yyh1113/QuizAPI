@@ -29,12 +29,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 # 3) API 키 설정 (아래 중 택1)
-   A. .env 파일(프로젝트 루트에 생성):
-      API_KEY=발급받은_키값
-   B. 현재 터미널 세션에 임시 설정(Windows PowerShell):
-      $env:API_KEY="발급받은_키값"
-   C. 영구 설정(Windows PowerShell, 새 터미널부터 적용)(권장):
-      setx API_KEY "발급받은_키값"
+ A. .env 파일(프로젝트 루트에 생성):
+    API_KEY=발급받은_키값
+ B. 현재 터미널 세션에 임시 설정(Windows PowerShell):
+    $env:API_KEY="발급받은_키값"
+ C. 영구 설정(Windows PowerShell, 새 터미널부터 적용)(권장):
+    setx API_KEY "발급받은_키값"
 
 # 4) 서버 실행
 python -m uvicorn app:app --reload --port 8000
