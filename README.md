@@ -83,3 +83,13 @@ Swagger UI일 때
 3. Body에 {"text":"..."}
 
 4. Execute
+
+
+## 5) 트러블슈팅
+-API_KEY 미설정(500): .env의 API_KEY= 또는 PowerShell에서 $env:API_KEY="..." / setx API_KEY "...".
+
+-GET으로 호출(405): /summarize_and_quiz는 POST 전용.
+
+-JSON parse failed: 모델 출력이 코드펜스/포맷 이탈 → 재시도 또는 프롬프트·후처리 강화.
+
+-Windows setx 후 인식 안 됨: 새 터미널을 열어 실행.
