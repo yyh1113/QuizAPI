@@ -33,7 +33,7 @@ pip install -r requirements.txt
       API_KEY=발급받은_키값
    B. 현재 터미널 세션에 임시 설정(Windows PowerShell):
       $env:API_KEY="발급받은_키값"
-   C. 영구 설정(Windows PowerShell, 새 터미널부터 적용):
+   C. 영구 설정(Windows PowerShell, 새 터미널부터 적용)(권장):
       setx API_KEY "발급받은_키값"
 
 # 4) 서버 실행
