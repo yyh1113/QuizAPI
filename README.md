@@ -1,6 +1,6 @@
 # LLM Quiz API (FastAPI + Google Gemini)
 
-긴 텍스트를 간결 요약하고, 핵심 개념만 담은 4지선다형 퀴즈 2개를 JSON으로 반환하는 API입니다.
+LLM Quiz API는 FastAPI와 Google Gemini를 활용해 긴 텍스트를 간결 요약하고, 핵심 개념만 담은 4지선다형 퀴즈 2개를 JSON 형식으로 반환하는 API입니다.
 
 ## 주요 기능
 - 입력 텍스트 요약 (3문장 내외)
